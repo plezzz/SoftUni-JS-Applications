@@ -25,7 +25,6 @@ function attachEvents() {
     function refresh() {
         location.reload();
     }
-    //elements.$loadBtn().addEventListener('click', loadCatch);
 
     function addCatch() {
         const angler = elements.$catch.$angler().value;

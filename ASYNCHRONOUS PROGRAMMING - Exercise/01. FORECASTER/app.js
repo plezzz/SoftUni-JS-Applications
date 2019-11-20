@@ -56,10 +56,10 @@ function attachEvents() {
         const {name} = today;
         const degrees = degreeRange(low, high);
         const symbol = getNormalizedSymbol(condition);
-        const $divForecastWrapper = createHtmlElement('div', ['forecasts'], undefined);
+        const $divForecastWrapper = createHtmlElement('div', ['forecasts']);
         const $divLabel = createHtmlElement('div', ['label'], currentText);
         const $spanSymbol = createHtmlElement('span', ['condition', 'symbol'], weatherSymbols[symbol]);
-        const $spanWrapper = createHtmlElement('span', ['condition'], undefined);
+        const $spanWrapper = createHtmlElement('span', ['condition']);
         const $spanName = createHtmlElement('span', ['forecast-data'], name);
         const $spanDegrees = createHtmlElement('span', ['forecast-data'], degrees);
         const $spanCondition = createHtmlElement('span', ['forecast-data'], condition);
@@ -71,7 +71,7 @@ function attachEvents() {
     }
 
     function generateUpcomingWeatherInfo(upcoming) {
-        const $divForecastWrapper = createHtmlElement('div', ['forecast-info'], undefined);
+        const $divForecastWrapper = createHtmlElement('div', ['forecast-info']);
         const $divLabel = createHtmlElement('div', ['label'], upcomingText);
 
         upcoming.forecast.forEach((forecast) => {
@@ -79,7 +79,7 @@ function attachEvents() {
             const symbol = getNormalizedSymbol(condition);
             const degrees = degreeRange(low, high);
 
-            const $spanUpcoming = createHtmlElement('span', ['upcoming'], undefined);
+            const $spanUpcoming = createHtmlElement('span', ['upcoming']);
             const $spanSymbol = createHtmlElement('span', ['symbol'], weatherSymbols[symbol]);
             const $spanDegrees = createHtmlElement('span', ['forecast-data'], degrees);
             const $spanCondition = createHtmlElement('span', ['forecast-data'], condition);
@@ -102,7 +102,7 @@ function attachEvents() {
      * @param {array} classNames
      * @param {string} textContent
      */
-    function createHtmlElement(tagName, classNames, textContent) {
+    function createHtmlElement(tagName, classNames = undefined, textContent = undefined) {
         const element = document.createElement(tagName);
         if (classNames) {
             element.classList.add(...classNames)
