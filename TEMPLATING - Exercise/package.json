@@ -4,6 +4,7 @@
   "description": "",
   "main": "handlebars.min.js",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "handlebars": "^4.5.3"
   },
   "devDependencies": {},
