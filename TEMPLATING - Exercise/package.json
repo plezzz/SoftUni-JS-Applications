@@ -1,0 +1,15 @@
+{
+  "name": "templating",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handlebars.min.js",
+  "dependencies": {
+    "handlebars": "^4.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
